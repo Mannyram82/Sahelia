@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sahelia Character Sheet</title>
+        <link rel="stylesheet" href="character.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Shield of Sahelia Character Sheet</h1>
+            <div class="section">
+                <h2>Character Basics</h2>
+                <div class="row">
+                    <input type="text" placeholder="Name" />
+                    <input type="text" placeholder="Class and Subclass" />
+
+                    <div class="input-container">
+                        <span class="fixed-text">Level</span>
+                        <input type="number" class="input-with-fixed-text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Race" />
+                    <input type="text" placeholder="Background" />
+                    <input type="text" placeholder="Languages" />
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Kingdom of Origin" />
+                    <div class="input-container">
+                        <span class="fixed-text">Armor Class</span>
+                        <input type="number" class="input-with-fixed-text" />
+                    </div>
+                    <div class="input-container">
+                        <span class="fixed-text">Initiative Bonus</span>
+                        <input type="number" class="input-with-fixed-text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-container">
+                        <span class="fixed-text">Hit Points</span>
+                        <input type="number" class="input-with-fixed-text" />
+                    </div>
+                    <div class="input-container">
+                        <span class="fixed-text">Hit Die</span>
+                        <input type="text" class="input-with-fixed-text" />
+                    </div>
+                    <div class="input-container">
+                        <span class="fixed-text">Eldricon</span>
+                        <input type="number" class="input-with-fixed-text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-container saving-throws">
+                        <span class="fixed-text">Saving Throws</span>
+                        <textarea placeholder="Saving Throws"></textarea>
+                    </div>
+                    <!-- Death Saving Throws Section -->
+                    <div class="death-saving-throws">
+                        <!-- Label Wrapper -->
+                        <div class="death-saving-label">
+                            <label>Death Saving Throws</label>
+                        </div>
+
+                        <!-- Successes Section with 3 bubbles -->
+                        <div class="death-save">
+                            <div class="death-save-section">
+                                <span>Successes</span>
+                                <div class="bubbles">
+                                    <input
+                                        type="checkbox"
+                                        name="death-save-success"
+                                        class="death-save-circle"
+                                        id="success1"
+                                    />
+                                    <input
+                                        type="checkbox"
+                                        name="death-save-success"
+                                        class="death-save-circle"
+                                        id="success2"
+                                    />
+                                    <input
+                                        type="checkbox"
+                                        name="death-save-success"
+                                        class="death-save-circle"
+                                        id="success3"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Divider Line -->
+                            <div class="separator"></div>
+
+                            <!-- Failures Section with 3 bubbles -->
+                            <div class="death-save-section">
+                                <span>Failures</span>
+                                <div class="bubbles">
+                                    <input
+                                        type="checkbox"
+                                        name="death-save-failure"
+                                        class="death-save-circle"
+                                        id="failure1"
+                                    />
+                                    <input
+                                        type="checkbox"
+                                        name="death-save-failure"
+                                        class="death-save-circle"
+                                        id="failure2"
+                                    />
+                                    <input
+                                        type="checkbox"
+                                        name="death-save-failure"
+                                        class="death-save-circle"
+                                        id="failure3"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Skills and Proficiencies</h2>
+                    <div class="skill-row">
+                        <span>Might:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Sorcery:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Sneak:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Mind:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Charm:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Awareness:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Healing:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Wilderness:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Nimbleness:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Artistry:</span>
+                        <div class="input-container">
+                            <span class="fixed-text">Proficiency</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Score</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Modifier</span>
+                            <input type="number" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <textarea placeholder="Weapon Proficiencies"></textarea>
+                        <textarea placeholder="Other Proficiencies"></textarea>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Inventory and Feats</h2>
+                    <div class="row">
+                        <textarea
+                            placeholder="Weapons and Damage/Type"
+                        ></textarea>
+                        <textarea placeholder="Equipment"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="input-container">
+                            <label
+                                for="feats-textarea"
+                                class="feats-textarea-label"
+                                >Feats and Benefits (Racial, Class,
+                                Background)</label
+                            >
+                            <textarea id="feats-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Spellcasting</h2>
+                    <div class="row">
+                        <div class="input-container">
+                            <span class="fixed-text">Mana</span>
+                            <input
+                                type="number"
+                                class="input-with-fixed-text"
+                            />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Spell Save DC</span>
+                            <input
+                                type="number"
+                                class="input-with-fixed-text"
+                            />
+                        </div>
+                        <div class="input-container">
+                            <span class="fixed-text">Spell Modifier</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <textarea placeholder="Spells"></textarea>
+                        <textarea placeholder="Magical Components"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="input-container">
+                            <span class="fixed-text">Spellcrafting Time</span>
+                            <input type="text" class="input-with-fixed-text" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Grace System Section -->
+                <div class="section">
+                    <h2>Grace System</h2>
+
+                    <!-- Kothar -->
+                    <div class="god">
+                        <h3>Kothar</h3>
+                        <div class="choices">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kothar"
+                                    value="chosen"
+                                />
+                                Chosen
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kothar"
+                                    value="blessed"
+                                />
+                                Blessed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kothar"
+                                    value="neutral"
+                                />
+                                Neutral
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kothar"
+                                    value="strayed"
+                                />
+                                Strayed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kothar"
+                                    value="forsaken"
+                                />
+                                Forsaken
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Eramé -->
+                    <div class="god">
+                        <h3>Eramé</h3>
+                        <div class="choices">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="erame"
+                                    value="chosen"
+                                />
+                                Chosen
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="erame"
+                                    value="blessed"
+                                />
+                                Blessed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="erame"
+                                    value="neutral"
+                                />
+                                Neutral
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="erame"
+                                    value="strayed"
+                                />
+                                Strayed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="erame"
+                                    value="forsaken"
+                                />
+                                Forsaken
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Morvath -->
+                    <div class="god">
+                        <h3>Morvath</h3>
+                        <div class="choices">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="morvath"
+                                    value="chosen"
+                                />
+                                Chosen
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="morvath"
+                                    value="blessed"
+                                />
+                                Blessed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="morvath"
+                                    value="neutral"
+                                />
+                                Neutral
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="morvath"
+                                    value="strayed"
+                                />
+                                Strayed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="morvath"
+                                    value="forsaken"
+                                />
+                                Forsaken
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Kalara -->
+                    <div class="god">
+                        <h3>Kalara</h3>
+                        <div class="choices">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kalara"
+                                    value="chosen"
+                                />
+                                Chosen
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kalara"
+                                    value="blessed"
+                                />
+                                Blessed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kalara"
+                                    value="neutral"
+                                />
+                                Neutral
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kalara"
+                                    value="strayed"
+                                />
+                                Strayed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="kalara"
+                                    value="forsaken"
+                                />
+                                Forsaken
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Balorin -->
+                    <div class="god">
+                        <h3>Balorin</h3>
+                        <div class="choices">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="balorin"
+                                    value="chosen"
+                                />
+                                Chosen
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="balorin"
+                                    value="blessed"
+                                />
+                                Blessed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="balorin"
+                                    value="neutral"
+                                />
+                                Neutral
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="balorin"
+                                    value="strayed"
+                                />
+                                Strayed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="balorin"
+                                    value="forsaken"
+                                />
+                                Forsaken
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Illyandra -->
+                    <div class="god">
+                        <h3>Illyandra</h3>
+                        <div class="choices">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="illyandra"
+                                    value="chosen"
+                                />
+                                Chosen
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="illyandra"
+                                    value="blessed"
+                                />
+                                Blessed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="illyandra"
+                                    value="neutral"
+                                />
+                                Neutral
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="illyandra"
+                                    value="strayed"
+                                />
+                                Strayed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="illyandra"
+                                    value="forsaken"
+                                />
+                                Forsaken
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Garrick -->
+                    <div class="god">
+                        <h3>Garrick</h3>
+                        <div class="choices">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="garrick"
+                                    value="chosen"
+                                />
+                                Chosen
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="garrick"
+                                    value="blessed"
+                                />
+                                Blessed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="garrick"
+                                    value="neutral"
+                                />
+                                Neutral
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="garrick"
+                                    value="strayed"
+                                />
+                                Strayed
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="garrick"
+                                    value="forsaken"
+                                />
+                                Forsaken
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Alignment Spectrums</h2>
+                    <div class="alignment-row">
+                        <div>
+                            <label for="freedom-order">Freedom vs Order</label>
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="50"
+                                class="alignment-slider"
+                                id="freedom-order"
+                            />
+                        </div>
+                        <div>
+                            <label for="individualism-collectivism"
+                                >Individualism vs Collectivism</label
+                            >
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="50"
+                                class="alignment-slider"
+                                id="individualism-collectivism"
+                            />
+                        </div>
+                        <div>
+                            <label for="honesty-deceit"
+                                >Honesty vs Deceit</label
+                            >
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="50"
+                                class="alignment-slider"
+                                id="honesty-deceit"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="additional-info">
+                    <h2>Additional Information</h2>
+                    <div class="row">
+                        <textarea placeholder="Personality"></textarea>
+                        <textarea placeholder="Backstory"></textarea>
+                    </div>
+                    <div class="row">
+                        <textarea placeholder="Allies and Enemies"></textarea>
+                        <textarea placeholder="Goals"></textarea>
+                    </div>
+                    <div class="row">
+                        <textarea placeholder="Conditions Tracking"></textarea>
+                        <textarea placeholder="Notes"></textarea>
+                    </div>
+                </div>
+                <!-- Print Button -->
+                <div class="print-button">
+                    <button onclick="window.print()">
+                        Summon Your Character to the Page!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
