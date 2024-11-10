@@ -173,15 +173,15 @@
 
     /* Force the grid layout to always be desktop-like when printing */
     .grid-2 {
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-template-columns: repeat(2, 1fr); /* Fixed two columns */
     }
 
     .grid-3 {
-        grid-template-columns: repeat(3, 1fr); /* Three columns */
+        grid-template-columns: repeat(3, 1fr); /* Fixed three columns */
     }
 
     .grid-4 {
-        grid-template-columns: repeat(4, 1fr); /* Four columns */
+        grid-template-columns: repeat(4, 1fr); /* Fixed four columns */
     }
 
     /* Ensure the container takes full width when printing */
