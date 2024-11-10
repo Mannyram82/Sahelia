@@ -172,3 +172,34 @@
                 grid-template-columns: 1fr;
             }
         }
+@media print {
+    /* Set a fixed width for print to resemble the desktop layout */
+    body, .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Ensure grid layouts do not stack for print */
+    .grid {
+        display: grid !important;
+        gap: 15px !important;
+    }
+
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    /* Force all elements to show in their desktop styles */
+    * {
+        display: block !important;
+    }
+}
