@@ -154,53 +154,47 @@
         }
 
         @media print {
-            .print-button {
-                display: none;
-            }
-
-            body {
-                background: white;
-            }
-
-            .section {
-                break-inside: avoid;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .grid-2, .grid-3, .grid-4 {
-                grid-template-columns: 1fr;
-            }
-        }
-
-/* Vendor Prefixes for Flexbox */
-.container {
-    display: -webkit-flex;  /* Chrome/Safari */
-    display: -moz-flex;     /* Firefox */
-    display: flex;          /* Standard */
-}
-
-/* CSS Grid (with fallback for older browsers) */
-@supports (display: grid) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    /* Hide the print button during printing */
+    .print-button {
+        display: none;
     }
-}
 
-/* Normalize default styles (import this link in your HTML or include via CSS) */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+    /* Ensure the body background is white for printing */
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
 
-/* Example Media Query for responsiveness */
-@media (max-width: 768px) {
+    /* Prevent sections from breaking across pages */
+    .section {
+        break-inside: avoid;
+    }
+
+    /* Force the grid layout to always be desktop-like when printing */
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr); /* Fixed two columns */
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr); /* Fixed three columns */
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr); /* Fixed four columns */
+    }
+
+    /* Ensure the container takes full width when printing */
     .container {
-        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 }
 
-/* Add any additional feature queries as needed */
-@supports (--css: variables) {
-    .element {
-        /* No color change here */
+/* Regular layout for screen use (mobile and desktop) */
+@media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
     }
 }
