@@ -1,0 +1,93 @@
+:root {
+            --primary-color: #2c3e50;
+            --accent-color: #8b4513;
+            --background-color: #f6e6cc;
+            --link-color: #8b4513;
+            --hover-color: #5e2f0d;
+            --card-background: rgba(255, 255, 255, 0.9);
+        }
+
+        body {
+            font-family: "Palatino", serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: var(--background-color);
+            background-image: linear-gradient(rgba(246, 230, 204, 0.9), rgba(246, 230, 204, 0.9)),
+                            url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50L0 0h100L50 50zm0 0L0 100h100L50 50' fill='none' stroke='%23c4b18e' stroke-width='0.5'/%3E%3C/svg%3E");
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 8px solid var(--accent-color);
+        }
+        h1 { color: #fff; font-size: 3em; margin: 0; }
+        .subtitle { color: #f6e6cc; font-style: italic; margin-top: 10px; }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .kingdom-section { margin-bottom: 40px; }
+        .kingdom-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 4px solid var(--accent-color);
+            color: white;
+        }
+        .kingdom-title { margin: 0; font-size: 2em; }
+        .houses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .house-card {
+            background: var(--card-background);
+            border: 3px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .house-header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .house-symbol {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+        }
+        .house-symbol img { width: 100%; height: 100%; object-fit: cover; }
+        .house-title {
+            color: var(--accent-color);
+            margin: 0;
+            font-size: 1.5em;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+        .house-details { color: var(--primary-color); }
+        .ruler-info {
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+        }
+        .ruler-title {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
