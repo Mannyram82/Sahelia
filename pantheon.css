@@ -116,7 +116,7 @@
 
         .item-image-container {
             width: 100%;
-            height: 150px;
+            height: 250px;
             border: 2px solid var(--accent-color);
             border-radius: 5px;
             margin-bottom: 10px;
