@@ -172,35 +172,3 @@
                 grid-template-columns: 1fr;
             }
         }
-
-/* Vendor Prefixes for Flexbox */
-.container {
-    display: -webkit-flex;  /* Chrome/Safari */
-    display: -moz-flex;     /* Firefox */
-    display: flex;          /* Standard */
-}
-
-/* CSS Grid (with fallback for older browsers) */
-@supports (display: grid) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Normalize default styles (import this link in your HTML or include via CSS) */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-
-/* Example Media Query for responsiveness */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-}
-
-/* Add any additional feature queries as needed */
-@supports (--css: variables) {
-    .element {
-        /* No color change here */
-    }
-}
