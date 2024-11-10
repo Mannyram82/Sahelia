@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Sheet</title>
     <link rel="stylesheet" href="character.css">
 </head>
 <body>
@@ -336,14 +335,6 @@
     </div>
 
     <button class="print-button" onclick="window.print()">Print Character Sheet</button>
-
-    <script>
-        // Add click handler for death save circles
-        document.querySelectorAll('.circle').forEach(circle => {
-            circle.addEventListener('click', function() {
-                this.classList.toggle('filled');
-            });
-        });
-    </script>
+    
 </body>
 </html>
