@@ -15,7 +15,7 @@
         }
 
         .container {
-            max-width: 1600px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0px;
         }
@@ -173,6 +173,7 @@
         max-width: 1200px;
         width: 100%;
         margin: 10 auto;
+                padding: 10px;
     }
 
     /* Ensure grid layouts do not stack for print */
