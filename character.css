@@ -186,7 +186,7 @@
     /* Ensure grid layouts do not stack for print */
     .grid {
         display: grid !important;
-        gap: 15px !important;
+        gap: 10px !important;
     }
 
     .grid-2 {
