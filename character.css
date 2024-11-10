@@ -154,22 +154,47 @@
         }
 
         @media print {
-            .print-button {
-                display: none;
-            }
+    /* Hide the print button during printing */
+    .print-button {
+        display: none;
+    }
 
-            body {
-                background: white;
-            }
+    /* Ensure the body background is white for printing */
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
 
-            .section {
-                break-inside: avoid;
-            }
-        }
+    /* Prevent sections from breaking across pages */
+    .section {
+        break-inside: avoid;
+    }
 
-        @media (max-width: 768px) {
-            .grid-2, .grid-3, .grid-4 {
-                grid-template-columns: 1fr;
-            }
-        }
+    /* Force the grid layout to always be desktop-like when printing */
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
 
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr); /* Four columns */
+    }
+
+    /* Ensure the container takes full width when printing */
+    .container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Regular layout for screen use (mobile and desktop) */
+@media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+}
