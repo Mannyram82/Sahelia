@@ -1,159 +1,107 @@
 :root {
-            --primary-color: #2c3e50;
-            --accent-color: #8b4513;
-            --background-color: #f6e6cc;
-            --border-color: #8b4513;
-        }
+    --primary-color: #2c3e50;
+    --accent-color: #8b4513;
+    --background-color: #f6e6cc;
+    --border-color: #8b4513;
+}
 
-        body {
-            font-family: "Palatino", serif;
-            background-color: var(--background-color);
-            color: var(--primary-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
+body {
+    font-family: "Palatino", serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        .sheet-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.sheet-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-        .section {
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
+.section {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
-        h1, h2 {
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 5px;
-        }
+h1, h2 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}
 
-        .grid {
-            display: grid;
-            gap: 15px;
-        }
+.grid {
+    display: grid;
+    gap: 15px;
+}
 
-        .grid-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
 
-        .grid-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
 
-        .grid-4 {
-            grid-template-columns: repeat(4, 1fr);
-        }
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+.form-group {
+    margin-bottom: 15px;
+}
 
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
-        input[type="text"],
-        input[type="number"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            background: white;
-        }
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: white;
+}
 
-        .skill-item {
-            display: grid;
-            grid-template-columns: auto 30px 30px 60px;
-            gap: 10px;
-            align-items: center;
-            margin-bottom: 5px;
-        }
+.skill-item {
+    display: grid;
+    grid-template-columns: auto 30px 30px 60px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+}
 
-        .checkbox-group {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-        .saving-throws {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
+/* Ensure a fixed grid layout for all screen sizes */
+.grid-2,
+.grid-3,
+.grid-4 {
+    grid-template-columns: repeat(2, 1fr); /* Desktop: always 2 columns */
+}
 
-        .circle {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
-            cursor: pointer;
-        }
+/* No mobile layout changes, maintain grid layout on all screen sizes */
 
-        .circle.filled {
-            background-color: var(--accent-color);
-        }
-
-        .slider-container {
-            margin: 20px 0;
-        }
-
-        .slider {
-            width: 100%;
-            margin: 10px 0;
-        }
-
-        .slider-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9em;
-        }
-
-        .gods-grid {
-            display: grid;
-            gap: 10px;
-        }
-
-        .god-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .print-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1000;
-        }
-
-        .print-button:hover {
-            background: var(--primary-color);
-        }
-
-        @media print {
+/* Print-specific layout */
+@media print {
     /* Hide the print button during printing */
     .print-button {
         display: none;
@@ -171,7 +119,7 @@
         break-inside: avoid;
     }
 
-    /* Force the grid layout to always be desktop-like when printing */
+    /* Maintain the same grid layout for printing */
     .grid-2 {
         grid-template-columns: repeat(2, 1fr); /* Fixed two columns */
     }
@@ -189,12 +137,5 @@
         width: 100%;
         padding: 0;
         margin: 0;
-    }
-}
-
-/* Regular layout for screen use (mobile and desktop) */
-@media (max-width: 768px) {
-    .grid-2, .grid-3, .grid-4 {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
     }
 }
