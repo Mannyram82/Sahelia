@@ -10,14 +10,14 @@
             background-color: var(--background-color);
             color: var(--primary-color);
             line-height: 1.6;
-            margin: 0;
-            padding: 0px;
+            margin: 0.5;
+            padding: 10px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0px;
+            padding: 10px;
         }
 
         .sheet-header {
@@ -29,7 +29,7 @@
             background: rgba(255, 255, 255, 0.9);
             border: 2px solid var(--border-color);
             border-radius: 8px;
-            padding: 0px;
+            padding: 10px;
             margin-bottom: 20px;
         }
 
@@ -170,10 +170,10 @@
 @media print {
     /* Set a fixed width for print to resemble the desktop layout */
     body, .container {
-        max-width: 1200px;
+        max-width: 100%;
         width: 100%;
-        margin: 10 auto;
-                padding: 10px;
+        margin: 0 auto;
+                padding: 0px;
     }
 
     /* Ensure grid layouts do not stack for print */
