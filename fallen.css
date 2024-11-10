@@ -1,0 +1,203 @@
+:root {
+            --primary-color: #2c3e50;
+            --accent-color: #8b4513;
+            --background-color: #f6e6cc;
+            --link-color: #8b4513;
+            --hover-color: #5e2f0d;
+            --card-background: rgba(255, 255, 255, 0.9);
+        }
+
+        body {
+            font-family: "Palatino", serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: var(--background-color);
+            background-image: linear-gradient(rgba(246, 230, 204, 0.9), rgba(246, 230, 204, 0.9)),
+                            url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50L0 0h100L50 50zm0 0L0 100h100L50 50' fill='none' stroke='%23c4b18e' stroke-width='0.5'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border: 8px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .subtitle {
+            color: #f6e6cc;
+            font-style: italic;
+            margin-top: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: var(--hover-color);
+        }
+
+        .fallen-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .fallen-card {
+            background: var(--card-background);
+            border: 3px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .fallen-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .fallen-title {
+            color: var(--accent-color);
+            font-size: 1.8em;
+            margin: 0 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            text-align: center;
+        }
+
+        .fallen-image {
+            width: 100%;
+            height: 300px;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .fallen-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .section-title {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 15px 0 5px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        .section-content {
+            color: var(--primary-color);
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .weapon-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .weapon-image {
+            width: 120px;
+            height: 120px;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .weapon-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .weapon-name {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .cult-container {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .cult-symbol {
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .cult-symbol img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cult-details {
+            flex-grow: 1;
+        }
+
+        .cult-description {
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .fallen-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .weapon-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cult-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .weapon-image, .cult-symbol {
+                margin: 0 auto;
+            }
+        }
+
